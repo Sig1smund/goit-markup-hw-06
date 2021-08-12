@@ -329,7 +329,7 @@ body button:active {
   top: 50%;
   left: 50%;
 
-  min-width: 528px;
+  max-width: 528px;
   min-height: 581px;
 
   background-color: rgba(255, 255, 255, 1);
@@ -337,6 +337,10 @@ body button:active {
   transform: scale(1) translate(-50%, -50%);
 
   transition: transform 250ms var(--cubic);
+
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .modal-button {
@@ -359,8 +363,136 @@ body button:active {
   color: #000000;
 }
 
+.modal-button:hover,
+.modal-button:focus {
+  background-color: rgba(255, 255, 255, 1);
+  color: var(--action-color);
+}
+
 .icon-close {
   fill: currentColor;
+}
+
+.modal-form {
+  padding: 40px;
+}
+
+.modal-title {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: var(--primary-text-color);
+
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  /* display: block; */
+  position: relative;
+
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.form-field textarea {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-field textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  padding-top: 12px;
+  padding-left: 12px;
+}
+
+.form-field input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  height: 40px;
+}
+
+.form-field input:hover .form-field input:focus,
+.form-field input:active {
+  color: var(--action-color);
+}
+
+.field-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  margin-bottom: 30px;
+}
+
+.field-checkbox input {
+  margin-right: 7px;
+}
+
+.field-checkbox .policy-agreement {
+  text-decoration: underline;
+  color: var(--action-color);
+}
+
+.submit-button {
+  display: block;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  background-color: var(--action-color);
+  color: var(--background-color);
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*ADVANTAGES*/
@@ -1004,7 +1136,7 @@ body button:active {
   width: auto;
   padding-bottom: 30px;
   margin-left: 0px;
-  margin-right: auto;
+  margin-right: 93px;
   margin-top: 12px;
   display: block;
   justify-content: center;
@@ -1072,4 +1204,45 @@ body button:active {
   background-color: var(--action-color);
 
   transform: transition;
+}
+
+.sign-container {
+  width: auto;
+  padding-bottom: 30px;
+  margin-left: 0px;
+  margin-right: auto;
+  margin-top: 12px;
+  display: block;
+  justify-content: center;
+}
+
+.sign-container .title {
+  display: block;
+
+  font-family: Roboto;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+.sign-form {
+  position: relative;
+}
+
+.sign-form input {
+  position: relative;
+}
+
+.sign-form label {
+  position: absolute;
+  left: 16px;
 }
