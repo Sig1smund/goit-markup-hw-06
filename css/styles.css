@@ -373,8 +373,16 @@ body button:active {
   fill: currentColor;
 }
 
-.modal-form {
+.modal .modal-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 528px;
+  min-height: 581px;
+
   padding: 40px;
+  margin: 0;
+
+  outline: 1px solid tomato;
 }
 
 .modal-title {
@@ -393,16 +401,55 @@ body button:active {
 }
 
 .form-field {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  position: relative;
 
-  margin: 0;
-  margin-bottom: 10px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  margin-bottom: 28px;
 }
 
-.form-field label {
-  /* display: block; */
+.form-field .form-input {
   position: relative;
+  width: 448px;
+  height: 40px;
+
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-field .label-name {
+  position: absolute;
+  top: -50%;
+  left: 0;
+
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.form-field .label-icon {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  background-color: yellowgreen;
+}
+
+.form-field .comment-name {
+  position: absolute;
+  top: -50%;
+  left: 0;
 
   font-family: Roboto;
   font-size: 12px;
@@ -414,11 +461,15 @@ body button:active {
 }
 
 .form-field textarea {
+  position: relative;
+
+  width: 448px;
+  height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-.form-field textarea::placeholder {
+.form-field .text-input::placeholder {
   color: rgba(117, 117, 117, 0.5);
 
   font-family: Roboto;
@@ -431,16 +482,6 @@ body button:active {
 
   padding-top: 12px;
   padding-left: 12px;
-}
-
-.form-field input {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  height: 40px;
-}
-
-.form-field input:hover .form-field input:focus,
-.form-field input:active {
-  color: var(--action-color);
 }
 
 .field-checkbox {
@@ -578,12 +619,13 @@ body button:active {
 
 .examples-list > .item {
   position: relative;
+  z-index: -1;
 
   margin-right: 30px;
 }
 
 .item > img {
-  height: 100%;
+  display: block;
 }
 
 .examples-list .item:nth-child(3) {
@@ -604,8 +646,6 @@ body button:active {
 
   margin: 0;
   padding: 0;
-
-  z-index: 2;
 
   font-size: 14px;
   font-style: normal;
