@@ -441,7 +441,7 @@ body button:active {
   letter-spacing: 0.01em;
   text-align: left;
 
-  color: #75757580;
+  color: var(--primary-text-color);
 
   cursor: pointer;
 }
@@ -504,7 +504,7 @@ body button:active {
   letter-spacing: 0.01em;
   text-align: left;
 
-  color: #75757580;
+  color: var(--primary-text-color);
   cursor: pointer;
 }
 
