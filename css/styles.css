@@ -1260,13 +1260,14 @@ body button:active {
 }
 
 .social-footer {
+  display: block;
+  justify-content: center;
+
   width: auto;
   padding-bottom: 30px;
   margin-left: 0px;
   margin-right: 93px;
   margin-top: 12px;
-  display: block;
-  justify-content: center;
 }
 
 .social-footer .title {
