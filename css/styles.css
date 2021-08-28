@@ -1065,7 +1065,7 @@ body button:active {
 
   border: 1px solid rgba(238, 238, 238, 1);
 
-  transition-property: background, box-shadow;
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic);
 }
@@ -1080,7 +1080,6 @@ body button:active {
 
 .project:hover,
 .project:focus {
-  background: rgba(255, 255, 255, 1);
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
@@ -1128,8 +1127,21 @@ body button:active {
   color: var(--background-color);
 }
 
-.project:hover .project-overlay,
-.project:focus .project-overlay {
+.project a {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic);
+}
+
+.project a:focus,
+.project a:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  transform: transition;
+}
+
+.project a:hover .project-overlay,
+.project a:focus .project-overlay {
   transform: translateY(0);
   opacity: 1;
 }
